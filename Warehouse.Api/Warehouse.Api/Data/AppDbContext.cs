@@ -12,6 +12,7 @@ namespace Warehouse.Api.Data
         // List of database tables
         public DbSet<Product> Products { get; set; }
         public DbSet<Team> Teams { get; set; }
-
+        public DbSet<User> Users { get; set; }
+        public DbSet<WarehouseTask> Tasks { get; set; }
     }
 }
