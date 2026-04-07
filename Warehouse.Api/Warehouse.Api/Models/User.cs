@@ -27,6 +27,7 @@ namespace Warehouse.Api.Models
         public UserRole Role { get; set; }
         // ID of the team the user belongs to (Foreign Key)
         public int? TeamId { get; set; }
+        public Team? Team { get; set; }
         public bool IsActive { get; set; }
     }
 }

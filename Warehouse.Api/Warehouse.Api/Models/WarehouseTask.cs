@@ -2,7 +2,7 @@
 
 namespace Warehouse.Api.Models
 {
-    public enum TaskStatus
+    public enum WarehouseTaskStatus
     {
         New,
         InProgress,
@@ -24,9 +24,10 @@ namespace Warehouse.Api.Models
         public string Title { get; set; } = string.Empty;
         [Required]
         public string Description { get; set; } = string.Empty;
-        public TaskStatus Status {  get; set; }
+        public WarehouseTaskStatus Status {  get; set; }
         public TaskPriority Priority { get; set; }
         public int CreatedByUserId { get; set; }
+        public User CreatedByUser { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime DeadlineAt { get; set; }
     }

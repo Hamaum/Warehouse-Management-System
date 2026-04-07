@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Warehouse.Api.Models
 {
@@ -12,5 +13,9 @@ namespace Warehouse.Api.Models
         public string Name { get; set; } = string.Empty;
         // ID of the manager assigned to the team (Foreign Key)
         public int SupervisorId { get; set; }
+        [ForeignKey("SupervisorId")]
+        public User Supervisor { get; set; }
+        [InverseProperty("Team")]
+        public ICollection<User> Members { get; set; }
     }
 }

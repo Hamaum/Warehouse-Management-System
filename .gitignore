@@ -482,3 +482,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Project-specific ignored files
+Project.docx
+users_data.txt
